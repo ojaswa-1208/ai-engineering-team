@@ -5,7 +5,14 @@ All notable changes to **AI Engineering Team (`aet`)** are documented in this fi
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-**Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso** · <https://github.com/faizcasm/ai-engineering-team>
+**Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso** · <https://github.com/faizcasm/ai-engineering-team>
+
+## [Unreleased]
+
+### Added
+
+- `docs/interns/` — first-week onboarding track for Ryuksaidso interns: [start here](docs/interns/README.md), [day-1 setup](docs/interns/onboarding.md), [codebase tour](docs/interns/codebase-tour.md) and the [day-by-day task list](docs/interns/first-week.md).
+- Link to the intern guide from the README documentation table and the CONTRIBUTING development-setup section.
 
 ## [1.0.0] - 2026-10-03
 
@@ -84,4 +91,4 @@ First public release of **AI Engineering Team** — a zero-runtime-dependency, T
 
 ---
 
-**Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso** · Copyright (c) 2026 Faizan Hameed · [MIT License](LICENSE)
+**Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso** · Copyright (c) 2026 Faizan Hameed · [MIT License](LICENSE)

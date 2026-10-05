@@ -2,7 +2,7 @@
 
 **Open-source agentic coding CLI with a built-in team of AI engineers** — a zero-runtime-dependency, TypeScript/Node ESM alternative to Claude Code and Codex.
 
-**Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso** · Repo: <https://github.com/faizcasm/ai-engineering-team> · License: MIT
+**Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso** · Repo: <https://github.com/faizcasm/ai-engineering-team> · License: MIT
 
 `aet` runs one prompt (or a whole plan) against your real workspace with real tools — read/write files, run shell commands, search the codebase, fetch docs, delegate to specialist subagents — behind an explicit permission system. It talks to Anthropic, OpenAI, OpenRouter, Groq, DeepSeek, a local Ollama server, or a fully offline mock provider. No API keys required to try it.
 
@@ -10,7 +10,7 @@
 
 **MIT License · Node.js >= 20.10 · 0 runtime dependencies · 13 built-in tools · 11 built-in agents · 7 providers · 4 permission modes**
 
-> **Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso**
+> **Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso**
 
 ---
 
@@ -483,6 +483,7 @@ aet -p --output-format stream-json "refactor the parser" | jq -r 'select(.type==
 | [docs/permissions.md](docs/permissions.md) | Modes, rule syntax, approval UI, non-interactive behaviour |
 | [docs/providers.md](docs/providers.md) | Providers, credentials, base URLs, models, offline mock |
 | [docs/mcp.md](docs/mcp.md) | Adding/inspecting MCP servers, transports, troubleshooting |
+| [docs/interns/](docs/interns/README.md) | **New here?** First-week onboarding track for Ryuksaidso interns: setup, codebase tour, day-by-day tasks |
 
 Also: [CHANGELOG.md](CHANGELOG.md) · [CONTRIBUTING.md](CONTRIBUTING.md) · `aet help <command>`
 
@@ -504,6 +505,6 @@ Issues and PRs are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for setup,
 
 Released under the [MIT License](LICENSE).
 
-> **Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso**
+> **Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso**
 >
 > Repo: <https://github.com/faizcasm/ai-engineering-team> · Copyright (c) 2026 Faizan Hameed · License: MIT

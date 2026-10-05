@@ -2,9 +2,11 @@
 
 Thanks for helping make `aet` better. This document covers local setup, the rules that keep the codebase healthy, and what a good PR looks like.
 
-**Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso** · Repo: <https://github.com/faizcasm/ai-engineering-team>
+**Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso** · Repo: <https://github.com/faizcasm/ai-engineering-team>
 
 ## Development setup
+
+> **New to the team?** Interns should follow **[docs/interns/README.md](docs/interns/README.md)** — a day-by-day first-week track (setup → codebase tour → two small PRs) built on the rules in this file.
 
 Requirements: **Node.js >= 20.10.0** and npm. Nothing else — the CLI has zero runtime dependencies.
 
@@ -123,4 +125,4 @@ Open an issue at <https://github.com/faizcasm/ai-engineering-team/issues> with:
 
 ---
 
-**Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso** · Copyright (c) 2026 Faizan Hameed · [MIT License](LICENSE)
+**Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso** · Copyright (c) 2026 Faizan Hameed · [MIT License](LICENSE)
