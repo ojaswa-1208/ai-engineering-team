@@ -84,6 +84,12 @@ export const DEFAULT_CONFIG: Config = {
   mcpServers: {},
 };
 
+/** Keys that are part of Config but intentionally absent from DEFAULT_CONFIG. */
+const OPTIONAL_CONFIG_KEYS: readonly string[] = ["provider", "summarizeModel", "temperature", "backendUrl"];
+
+/** Every key `aet config` accepts (defaults + optional keys). */
+export const CONFIG_KEYS: readonly string[] = [...Object.keys(DEFAULT_CONFIG), ...OPTIONAL_CONFIG_KEYS];
+
 type RawConfig = Partial<Config> & { mcpServers?: Record<string, McpServerConfig> };
 
 async function readJsonFile<T>(file: string): Promise<T | null> {
@@ -109,7 +115,7 @@ function mergeConfig(base: Config, patch: RawConfig | null): Config {
       (merged as unknown as Record<string, string[]>)[key] = [...(value as string[])];
       continue;
     }
-    if (key in DEFAULT_CONFIG || key === "provider" || key === "summarizeModel") {
+    if (key in DEFAULT_CONFIG || OPTIONAL_CONFIG_KEYS.includes(key)) {
       (merged as unknown as Record<string, unknown>)[key] = value;
     }
   }
@@ -175,6 +181,18 @@ export async function saveUserConfig(patch: RawConfig): Promise<Config> {
 
 export async function readUserConfigRaw(): Promise<RawConfig | null> {
   return readJsonFile<RawConfig>(getPaths().userConfig);
+}
+
+/**
+ * Restore the user config file to stock defaults. Unlike `saveUserConfig`
+ * (which merges), this drops *every* stored key - including optional ones
+ * such as `provider`, `temperature` and `backendUrl`.
+ */
+export async function resetUserConfig(): Promise<Config> {
+  const paths = getPaths();
+  const defaults: RawConfig = JSON.parse(JSON.stringify(DEFAULT_CONFIG));
+  await writeTextFileAtomic(paths.userConfig, `${JSON.stringify(defaults, null, 2)}\n`);
+  return mergeConfig(DEFAULT_CONFIG, defaults);
 }
 
 /** Dot-path getter used by `aet config get <key>`. */

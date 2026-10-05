@@ -9,10 +9,12 @@ import { ensureDir, pathExists, readTextFile, writeTextFileAtomic } from "../uti
 import { humanDuration, truncateEnd, splitList } from "../util/text.js";
 import { getPaths, projectPaths } from "../core/paths.js";
 import {
+  CONFIG_KEYS,
   DEFAULT_CONFIG,
   getConfigValue,
   loadConfig,
   parseScalar,
+  resetUserConfig,
   saveUserConfig,
 } from "../core/config.js";
 import { Session } from "../core/session.js";
@@ -194,13 +196,19 @@ async function configCommand(argv: string[], cwd: string): Promise<number> {
       return 2;
     }
     const parsed = parseScalar(value);
+    if (!CONFIG_KEYS.includes(key)) {
+      process.stderr.write(
+        `${style.yellow("warning")}: "${key}" is not a known config key - it will be stored but ignored\n` +
+          `known keys: ${CONFIG_KEYS.join(", ")}\n`,
+      );
+    }
     await saveUserConfig({ [key]: parsed });
     out(`${style.green("saved")} ${key} = ${value} ${style.dim("\u2192 ~/.aet/config.json")}`);
     return 0;
   }
 
   if (action === "reset") {
-    await saveUserConfig(DEFAULT_CONFIG as unknown as Record<string, unknown>);
+    await resetUserConfig();
     out(`${style.green("reset")} user configuration to defaults`);
     return 0;
   }
@@ -515,8 +523,14 @@ async function mcpCommand(argv: string[], args: ParsedArgs, cwd: string): Promis
 
 /* -------------------------------------------------------------------- init */
 
-async function initCommand(argv: string[], args: ParsedArgs, cwd: string): Promise<number> {
-  const force = optionBool(args, "force");
+/**
+ * Scaffold `.aet/` + `AET.md` for a project. Shared by `aet init` and the
+ * REPL's `/init` slash command.
+ *
+ * @returns relative paths of files created (or updated).
+ */
+export async function scaffoldProject(cwd: string, options: { force?: boolean } = {}): Promise<string[]> {
+  const force = options.force === true;
   const dir = projectPaths(cwd).dir;
   const created: string[] = [];
 
@@ -619,6 +633,12 @@ Review the uncommitted changes in this repository ($ARGUMENTS).
     await fs.appendFile(gitignore, `\n# AI Engineering Team local state\n.aet/sessions/\n.aet/cache/\n`, "utf8");
     created.push(".gitignore (updated)");
   }
+
+  return created;
+}
+
+async function initCommand(argv: string[], args: ParsedArgs, cwd: string): Promise<number> {
+  const created = await scaffoldProject(cwd, { force: optionBool(args, "force") });
 
   out();
   if (created.length === 0) {

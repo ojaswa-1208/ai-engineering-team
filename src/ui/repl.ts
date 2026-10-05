@@ -659,7 +659,16 @@ export class Repl {
       }
 
       case "init": {
-        process.stdout.write(`${style.dim("run `aet init` in your shell to scaffold .aet/ (or use /config set ... )")}\n\n`);
+        const force = args.trim() === "--force";
+        const { scaffoldProject } = await import("../cli/commands.js");
+        const created = await scaffoldProject(this.runtime.cwd, { force });
+        if (created.length === 0) {
+          process.stdout.write(`${style.dim("already initialised - use /init --force to overwrite")}\n\n`);
+        } else {
+          process.stdout.write(`${style.green("created")} .aet/ scaffolding:\n`);
+          for (const file of created) process.stdout.write(`  ${style.cyan(file)}\n`);
+          process.stdout.write(`\n${style.dim("next: edit AET.md with your project instructions")}\n\n`);
+        }
         return "ok";
       }
 
