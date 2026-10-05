@@ -1,7 +1,7 @@
 /**
  * Sessions, config and custom slash commands (filesystem behaviour).
  *
- * Author: Faizan Hameed (https://faizcasm.me) - Founder of Ryuksaidso
+ * Author: Faizan Hameed (https://faizcasm.me) - Team Lead of Ryuksaidso
  */
 
 import { test, before, after } from "node:test";

@@ -2,7 +2,7 @@
 
 `aet` ships with a built-in **AI Engineering Team** of eleven roles. Any role can drive a session, run as a subagent via the `Task` tool, or act as a specialist inside the `aet team` pipeline.
 
-**Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso** · Repo: <https://github.com/faizcasm/ai-engineering-team> · License: MIT
+**Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso** · Repo: <https://github.com/faizcasm/ai-engineering-team> · License: MIT
 
 ## Built-in roles
 
@@ -181,4 +181,4 @@ Failure handling: if the plan cannot be parsed as JSON the run stops with `stopR
 
 ---
 
-**Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso** · Copyright (c) 2026 Faizan Hameed · [MIT License](../LICENSE)
+**Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso** · Copyright (c) 2026 Faizan Hameed · [MIT License](../LICENSE)

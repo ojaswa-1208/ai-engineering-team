@@ -11,7 +11,7 @@ export const REPO_URL = "https://github.com/faizcasm/ai-engineering-team";
 export const LICENSE = "MIT";
 
 /** Long-form author credit used in `--version`, `about` and docs. */
-export const CREDIT = `${AUTHOR} (${AUTHOR_URL}) - Founder of ${ORGANIZATION}`;
+export const CREDIT = `${AUTHOR} (${AUTHOR_URL}) - Team Lead of ${ORGANIZATION}`;
 
 export function versionString(): string {
   return `${CLI_NAME}/${VERSION} (${process.platform}-${process.arch}) node-${process.versions.node}`;

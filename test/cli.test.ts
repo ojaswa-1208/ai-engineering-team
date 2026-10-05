@@ -1,7 +1,7 @@
 /**
  * End-to-end CLI tests: spawn the real binary with the offline mock provider.
  *
- * Author: Faizan Hameed (https://faizcasm.me) - Founder of Ryuksaidso
+ * Author: Faizan Hameed (https://faizcasm.me) - Team Lead of Ryuksaidso
  */
 
 import { test, before, after } from "node:test";

@@ -2,7 +2,7 @@
 
 Everything `aet` does can be configured through layered configuration: built-in defaults, a user config file, a project config file, environment variables and CLI flags.
 
-**Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso** · Repo: <https://github.com/faizcasm/ai-engineering-team> · License: MIT
+**Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso** · Repo: <https://github.com/faizcasm/ai-engineering-team> · License: MIT
 
 ## Precedence
 
@@ -197,4 +197,4 @@ aet -p --provider mock --output-format json "hello"
 
 ---
 
-**Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso** · Copyright (c) 2026 Faizan Hameed · [MIT License](../LICENSE)
+**Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso** · Copyright (c) 2026 Faizan Hameed · [MIT License](../LICENSE)

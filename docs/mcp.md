@@ -2,7 +2,7 @@
 
 The Model Context Protocol (MCP) lets `aet` use external tool servers — filesystem access, GitHub, databases, browsers, internal APIs — without adding code to the CLI. `aet` speaks both standard transports: **stdio** (newline-delimited JSON-RPC over the child process's stdin/stdout) and **Streamable HTTP** (POST JSON-RPC with a JSON or SSE response), protocol version `2025-06-18`.
 
-**Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso** · Repo: <https://github.com/faizcasm/ai-engineering-team> · License: MIT
+**Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso** · Repo: <https://github.com/faizcasm/ai-engineering-team> · License: MIT
 
 ## Add a server
 
@@ -175,4 +175,4 @@ In `plan` mode MCP tools fall through to the approval prompt (auto-denied when n
 
 ---
 
-**Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso** · Copyright (c) 2026 Faizan Hameed · [MIT License](../LICENSE)
+**Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso** · Copyright (c) 2026 Faizan Hameed · [MIT License](../LICENSE)

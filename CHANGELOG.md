@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `docs/interns/` — first-week onboarding track for Ryuksaidso interns: [start here](docs/interns/README.md), [day-1 setup](docs/interns/onboarding.md), [codebase tour](docs/interns/codebase-tour.md) and the [day-by-day task list](docs/interns/first-week.md).
 - Link to the intern guide from the README documentation table and the CONTRIBUTING development-setup section.
 
+### Changed
+
+- Attribution: Faizan Hameed is credited as **Team Lead of Ryuksaidso** (was "Founder") across the README, LICENSE, package.json, docs, source headers, `--version` credit and the system prompt.
+
 ## [1.0.0] - 2026-10-03
 
 First public release of **AI Engineering Team** — a zero-runtime-dependency, TypeScript/Node ESM agentic coding CLI with a built-in team of AI engineering agents.

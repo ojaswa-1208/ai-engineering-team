@@ -235,7 +235,7 @@ See [`.env.example`](./.env.example) for the complete, commented list:
 
 ## Author
 
-Author: **Faizan Hameed** — [faizcasm.me](https://faizcasm.me) — Founder of Ryuksaidso
+Author: **Faizan Hameed** — [faizcasm.me](https://faizcasm.me) — Team Lead of Ryuksaidso
 
 ## License
 

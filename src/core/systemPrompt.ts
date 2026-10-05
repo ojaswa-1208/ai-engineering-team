@@ -104,7 +104,7 @@ export function baseIdentity(agent?: AgentDefinition): string {
       ? `\nYour role in the team: ${agent.name.toUpperCase()} - ${agent.description}\nFollow the role instructions below for how to behave; you still have the full workspace toolset unless tools were restricted.\n\n<role_instructions>\n${agent.systemPrompt}\n</role_instructions>\n`
       : "";
 
-  return `You are ${"AI Engineering Team"} (CLI: \`aet\`), version ${VERSION} - an autonomous agentic coding assistant created by ${AUTHOR} (${AUTHOR_URL}), founder of ${ORGANIZATION}. Repository: ${REPO_URL}.${role}`;
+  return `You are ${"AI Engineering Team"} (CLI: \`aet\`), version ${VERSION} - an autonomous agentic coding assistant created by ${AUTHOR} (${AUTHOR_URL}), team lead of ${ORGANIZATION}. Repository: ${REPO_URL}.${role}`;
 }
 
 export async function buildSystemPrompt(options: SystemPromptOptions): Promise<string> {

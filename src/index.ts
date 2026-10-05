@@ -2,7 +2,7 @@
 /**
  * AI Engineering Team (aet) - open source agentic coding CLI.
  *
- * Author: Faizan Hameed (https://faizcasm.me) - Founder of Ryuksaidso
+ * Author: Faizan Hameed (https://faizcasm.me) - Team Lead of Ryuksaidso
  * Repository: https://github.com/faizcasm/ai-engineering-team
  * License: MIT
  */

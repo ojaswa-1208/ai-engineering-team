@@ -178,7 +178,7 @@ export function renderVersion(): string {
   return [
     `aet/${VERSION} (${process.platform}-${process.arch}) node-${process.versions.node}`,
     `AI Engineering Team - open source agentic coding CLI`,
-    `Copyright (c) 2026 ${AUTHOR} (${AUTHOR_URL}) - Founder of ${ORGANIZATION}`,
+    `Copyright (c) 2026 ${AUTHOR} (${AUTHOR_URL}) - Team Lead of ${ORGANIZATION}`,
     `License: MIT | ${REPO_URL}`,
   ].join("\n");
 }

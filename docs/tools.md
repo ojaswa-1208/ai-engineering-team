@@ -2,7 +2,7 @@
 
 Every agent — built-in or custom — runs against your workspace through a fixed set of built-in tools, plus any tools contributed by MCP servers. List them with `aet tools` (or `/tools` in the REPL).
 
-**Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso** · Repo: <https://github.com/faizcasm/ai-engineering-team> · License: MIT
+**Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso** · Repo: <https://github.com/faizcasm/ai-engineering-team> · License: MIT
 
 ## Overview
 
@@ -273,4 +273,4 @@ Persist rules with `aet config set allowedTools "Bash(git:*),Edit(src/**)"` or i
 
 ---
 
-**Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso** · Copyright (c) 2026 Faizan Hameed · [MIT License](../LICENSE)
+**Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso** · Copyright (c) 2026 Faizan Hameed · [MIT License](../LICENSE)

@@ -2,7 +2,7 @@
 
 Every tool call is checked before it runs. `aet` starts from a conservative default, lets you widen or narrow it with rules and modes, and always fails **closed** when nobody is watching the terminal.
 
-**Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso** · Repo: <https://github.com/faizcasm/ai-engineering-team> · License: MIT
+**Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso** · Repo: <https://github.com/faizcasm/ai-engineering-team> · License: MIT
 
 ## Evaluation order
 
@@ -224,4 +224,4 @@ Persist a project-wide policy in `.aet/config.json` so every teammate and every 
 
 ---
 
-**Author: Faizan Hameed (https://faizcasm.me) — Founder of Ryuksaidso** · Copyright (c) 2026 Faizan Hameed · [MIT License](../LICENSE)
+**Author: Faizan Hameed (https://faizcasm.me) — Team Lead of Ryuksaidso** · Copyright (c) 2026 Faizan Hameed · [MIT License](../LICENSE)

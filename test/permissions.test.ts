@@ -1,7 +1,7 @@
 /**
  * Permission engine: rule syntax, modes, and the unattended fallback.
  *
- * Author: Faizan Hameed (https://faizcasm.me) - Founder of Ryuksaidso
+ * Author: Faizan Hameed (https://faizcasm.me) - Team Lead of Ryuksaidso
  */
 
 import { test } from "node:test";
