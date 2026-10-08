@@ -218,10 +218,14 @@ export function suggestAllowRule(request: PermissionRequest): string {
       if (!target) return request.tool;
       const extension = path.extname(target);
       // Prefer a directory-scoped rule so the whole folder stays editable.
-      const dir = path.dirname(target);
-      if (dir && dir !== "." && dir !== "/") {
-        return `${request.tool}(${dir.split(path.sep).join("/")}/**)`;
-      }
+      let normalizedTarget = target.replaceAll("\\", "/");
+if (/^[A-Za-z]:\//.test(normalizedTarget)) {
+  normalizedTarget = normalizedTarget.slice(2);
+}
+const dir = path.posix.dirname(normalizedTarget);
+if (dir && dir !== "." && dir !== "/") {
+  return `${request.tool}(${dir}/**)`;
+}
       return extension ? `${request.tool}(**/*${extension})` : request.tool;
     }
     default:
